@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: pulse-financial-platform
+    name: pulse-financial-app
     env: python
+    plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app_monochrome:app
+    startCommand: gunicorn app_monochrome:app --bind 0.0.0.0:$PORT --timeout 120
     envVars:
       - key: PYTHON_VERSION
-        value: 3.9.0 
+        value: 3.9.16 
