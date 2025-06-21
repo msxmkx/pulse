@@ -1,1 +1,1 @@
-web: gunicorn app_monochrome:app 
+web: gunicorn app_minimal:app 
